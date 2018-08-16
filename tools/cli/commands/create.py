@@ -269,7 +269,7 @@ write_files:
     ExecStartPre=/usr/bin/docker-credential-gcr configure-docker
     ExecStart=/usr/bin/docker run --rm -u 0 \
        --name=datalab \
-       -p 127.0.0.1:8080:8080 \
+       -p 8080:8080 \
        -v /mnt/disks/datalab-pd/content:/content \
        -v /mnt/disks/datalab-pd/tmp:/tmp \
        --env=HOME=/content \
